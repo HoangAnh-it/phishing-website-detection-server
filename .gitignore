@@ -1,0 +1,6 @@
+env
+data
+
+migrations
+model
+__pycache__

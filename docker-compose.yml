@@ -1,0 +1,16 @@
+version: '3.5'
+
+services:
+  db.phishing:
+    image: postgres:16
+    container_name: db.phishing
+    ports:
+      - "127.0.0.1:5434:5432"
+    volumes:
+      - ./data/database:/var/lib/postgresql/data
+      - ./data/sql:/sql
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=phishingweb
+    restart: always
