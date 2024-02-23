@@ -92,7 +92,7 @@ DATABASES = {
 }
 
 MODEL_STORAGE = os.path.abspath("services/model")
-
+CUDA_VISIBLE_DEVICES = "-1"
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
