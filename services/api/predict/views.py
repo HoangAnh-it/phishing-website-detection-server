@@ -1,13 +1,16 @@
 from rest_framework import generics, response, status
 
-import services.settings as settings
 import requests
 from services.app import ApiConfig
 from .utils import preprocess_input
 import numpy as np
 
 
-class Predict(generics.CreateAPIView):
+class Predict(generics.ListCreateAPIView):
+    def get(self, request, *args, **kwargs):
+
+        return response.Response("Hello")
+
     def post(self, request, *args, **kwargs):
         model = ApiConfig.model
         body = request.data
